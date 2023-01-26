@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css" rel="stylesheet">
+    <script src="https://github.hubspot.com/odometer/odometer.js"></script>
 </head>
 <body>
     <section>
@@ -14,19 +16,29 @@
             <div class="cloud" style="top: 150px; left: 60%" alt="drone"></div>
             <div class="cloud" style="top: 400px; left: 10%" alt="drone"></div>
             <div class="cloud" style="top: 600px; left: 80%" alt="drone"></div>
-
+            
             <div id="drone" class="drone" style="top: 40%; left: 5%" alt="drone">
                 <p id="dronetext"></p>
             </div>
         </aside>
         <main>
             <article>
-                <h1>Drone Statistik</h1>
+                <h1>
+                    Hvor Mange Har Certifikater 
+                    <br>
+                    I Danmark 🇩🇰
+                </h1>
+                <div class="counter">
+                    <div id="odometer" style="vertical-align: bottom !important;" class="odometer">0</div>
+                    <span>Certifikater</span>
+                </div>
+                <div>
 
-                <p>Her er der ingen damer</p>
+                </div>
             </article>
         </main>  
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/drone.js"></script>
+    <script src="js/api.js"></script>
 </body>
 </html>
