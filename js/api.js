@@ -5,8 +5,8 @@ const result = document.getElementById('odometer');
 
 const getApi = async (path) => {
     try {
-        const data = await fetch(`${fake}/${path}`, {
-            method: 'GET'
+        const data = await $.get(`${fake}/${path}`, {
+            method: 'GET',
         });
         if (data) {
             return data;
@@ -22,9 +22,12 @@ const getApi = async (path) => {
 }
 
 addEventListener('load', (event) => {
-    let data = getApi('');
-    console.log(data);
+    setTimeout( async () => {
+        let data = await getApi('');
+        odometer.innerHTML = data.products.length;
+    }, 1000);
 });
-setTimeout(function(){
-    odometer.innerHTML = 1231;
-}, 1000);    
+
+// setTimeout(function(){
+//     odometer.innerHTML = 1231;
+// }, 1000);    
